@@ -52,6 +52,7 @@ def add_goal():
         print("Remaining Time for the Month: ", time_balance)
         print("Current Goal List: ", goals)
         goal = input("""Type the goal you would like to work on this month - ex. Complete a new book, or Head to the Gym twice a week. \n""")
+        key.append(goal)
         time.sleep(2)
         print("\nType the hours needed to complete this goal.")
         print("Ex. If a 300 page book will take you 30 hours to complete, enter 30")
@@ -75,28 +76,34 @@ def add_goal():
             if choice.lower == "y":
                 clear()
                 pass
-            elif choice.lower == "n":
+            if choice.lower == "n":
                 running = False
 
 def ending():
     goal_list = []
     global goals
+    global key
     clear()
     print("Ok, lets think ahead...")
     time.sleep(2)
     print("It's the end of the month, and you start reviewing the goals you completed")
     time.sleep(2)
-    for x in goals.keys():
-        goal_list.append(x)
-    index_range = len(goal_list)
+    index_range = len(key)
     r_index = random.randint(0, index_range)
     print("You ", goals.get(r_index))
+    key.pop(0)
     time.sleep(2)
-    print("Anf you ", goals.get(r_index))
+    print("you also ", goals.get(r_index))
+    key.pop(0)
+    time.sleep(2)
+    print("And You", goals.get(r_index))
+    key.pop(0)
     time.sleep(2)
     print("Nice work!!")
 
 goals = {}
+
+key = []
 
 time_balance = intro() 
 
@@ -105,6 +112,10 @@ clear()
 print("Great, ok - lets start assigning some goals to complete") 
 
 add_goal()
+
+print(key)
+
+input()
 
 ending()
 
