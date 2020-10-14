@@ -1,5 +1,8 @@
 import time, os, random
 
+goals = {}
+key = []
+
 def clear():
     os.system( "cls" )
 
@@ -70,17 +73,15 @@ def add_goal():
         if time_balance <= 7:
             print("We're running out of available time for anymore goals --- current balance is: ", time_balance)
             running = False
-        else:
-            print("Do you want to add another goal for the month? Type 'y' for yes or 'n' for no \n")
-            choice = input()
-            if choice.lower == "y":
-                clear()
-                pass
-            if choice.lower == "n":
-                running = False
+        print("Do you want to add another goal for the month? Type 'y' for yes or 'n' for no \n")
+        choice = input()
+        if choice == "y":
+            clear()
+            continue
+        if choice == "n":
+            running = False
 
 def ending():
-    goal_list = []
     global goals
     global key
     clear()
@@ -90,32 +91,24 @@ def ending():
     time.sleep(2)
     index_range = len(key)
     r_index = random.randint(0, index_range)
-    print("You ", goals.get(r_index))
+    print("You ", key[r_index])
     key.pop(0)
     time.sleep(2)
-    print("you also ", goals.get(r_index))
+    print("you also ", key[r_index])
     key.pop(0)
     time.sleep(2)
-    print("And You", goals.get(r_index))
+    print("And You", key[r_index])
     key.pop(0)
     time.sleep(2)
     print("Nice work!!")
-
-goals = {}
-
-key = []
 
 time_balance = intro() 
 
 clear()
 
-print("Great, ok - lets start assigning some goals to complete") 
+print("Ok - lets start assigning some goals to complete") 
 
 add_goal()
-
-print(key)
-
-input()
 
 ending()
 
