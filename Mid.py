@@ -111,5 +111,7 @@ add_goal()
 
 ending()
 
+print(goals)
+
 input("Program Ended")
 
