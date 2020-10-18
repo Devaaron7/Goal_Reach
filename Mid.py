@@ -77,7 +77,7 @@ def add_goal():
         choice = input()
         if choice == "y":
             clear()
-            continue
+            pass
         if choice == "n":
             running = False
 
@@ -98,7 +98,6 @@ def ending():
     key.pop(0)
     time.sleep(2)
     print("And You", key[r_index])
-    key.pop(0)
     time.sleep(2)
     print("Nice work!!")
 
