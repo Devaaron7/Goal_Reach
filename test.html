@@ -1,182 +1,353 @@
 
 
+<!DOCTYPE html>
+<html>
+<body>
+
 <style>
 
-table.blueTable {
-border: 1px solid #05131C;
+.control {
+font-family: arial;
+display: block;
+position: relative;
+padding-left: 36px;
+margin-bottom: 15px;
+padding-top: 3px;
+cursor: pointer;
+font-size: 17px;
+}
+.control input {
+position: absolute;
+z-index: -1;
+opacity: 0;
+}
+.control_indicator {
+position: absolute;
+top: 2px;
+left: 0;
+height: 20px;
+width: 20px;
+background: #e6e6e6;
+border: 1px solid #000000;
+border-radius: 0px;
+}
+.control:hover input ~ .control_indicator,
+.control input:focus ~ .control_indicator {
+background: #cccccc;
+}
+
+.control input:checked ~ .control_indicator {
+background: #2aa1c0;
+}
+.control:hover input:not([disabled]):checked ~ .control_indicator,
+.control input:checked:focus ~ .control_indicator {
+background: #0e6647d;
+}
+.control input:disabled ~ .control_indicator {
+background: #e6e6e6;
+opacity: 0.6;
+pointer-events: none;
+}
+.control_indicator:after {
+box-sizing: unset;
+content: '';
+position: absolute;
+display: none;
+}
+.control input:checked ~ .control_indicator:after {
+display: block;
+}
+.control-checkbox .control_indicator:after {
+left: 8px;
+top: 4px;
+width: 3px;
+height: 8px;
+border: solid #ffffff;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.control-checkbox input:disabled ~ .control_indicator:after {
+border-color: #7b7b7b;
+}
+
+{display: inline-block; *display: inline; zoom: 1; vertical-align: top; font-size: 12px;}
+
+
+.weektitle {
 width: 100%;
-text-align: left;
-border-collapse: collapse;
-}
-table.blueTable td, table.blueTable th {
-border: 1px solid #AAAAAA;
-padding: 3px 2px;
-}
-table.blueTable tbody td {
-font-size: 13px;
-}
-table.blueTable thead {
-background: #000000;
-background: -moz-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
-background: -webkit-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
-background: linear-gradient(to bottom, #404040 0%, #191919 66%, #000000 100%);
-border-bottom: 2px solid #444444;
-}
-table.blueTable thead th {
-font-size: 15px;
-font-weight: bold;
-color: #FFFFFF;
-border-left: 2px solid #D0E4F5;
-}
-table.blueTable thead th:first-child {
-border-left: none;
+float: left;
+padding: 5px;
+border: 0px solid red;
 }
 
-table.blueTable tfoot td {
-font-size: 14px;
+
+.week1 {
+width: 20%;
+float: left;
+padding: 5px;
+border: 0px solid red;
 }
 
+.week2 {
+width: 20%;
+float: left;
+padding: 5px;
+border: 0px solid red;
+}
+
+.week3 {
+width: 20%;
+float: left;
+padding: 5px;
+border: 0px solid red;
+}
+
+
+.week4 {
+width: 20%;
+float: left;
+padding: 5px;
+border: 0px solid red;
+}
 
 </style>
 
 
 
+        <div class="weektitle">
 
-    <h2> Learn to drive </h2>
+        <h1> Lose 10 lbs </h1>
 
-    <table class="blueTable">
-    <thead>
-    <tr>
-    <th>Week 1</th>
-    <th>Week 2</th>
-    <th>Week 3</th>
-    <th>Week 4</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>Spend 30 minutes driving 1 item 1</td>
-    <td>Spend 30 minutes driving 2 item 1</td>
-    <td>Spend 30 minutes driving 3 item 1</td>
-    <td>Spend 30 minutes driving 4 item 1</td>
-    </tr>
-    <tr>
-    <td>Spend 30 minutes driving 1 item 2</td>
-    <td>Spend 30 minutes driving 2 item 2</td>
-    <td>Spend 30 minutes driving 3 item 2</td>
-    <td>Spend 30 minutes driving 4 item 2</td>
-    </tr>
-    <tr>
-    <td>Spend 30 minutes driving 1 item 3</td>
-    <td>Spend 30 minutes driving 2 item 3</td>
-    <td>Spend 30 minutes driving 3 item 3</td>
-    <td>Spend 30 minutes driving 4 item 3</td>
-    </tr>
-    <tr>
-    <td>Spend 30 minutes driving 1 item 4</td>
-    <td>Spend 30 minutes driving 2 item 4</td>
-    <td>Spend 30 minutes driving 3 item 4</td>
-    <td>Spend 30 minutes driving 4 item 4</td>
-    </tr>
-    </tbody>
-    </table>
-
-    <br>
+        </div>
 
 
+        <div class="week1">
+
+        <h2> Week 1 </h2>
+
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+        </div>
+
+
+        <div class="week2">
+
+        <h2> Week 2 </h2>
+
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+
+        </div>
+
+
+        <div class="week3">
+
+        <h2> Week 3 </h2>
+
+
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+
+        </div>
+
+
+        <div class="week4">
+
+        <h2> Week 4 </h2>
+
+
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Lose .5 lbs
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+
+        </div>
+
+    
+
+        <div class="weektitle">
+
+        <h1> Learn to Dance </h1>
+
+        </div>
+
+
+        <div class="week1">
+
+        <h2> Week 1 </h2>
+
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+        </div>
+
+
+        <div class="week2">
+
+        <h2> Week 2 </h2>
+
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+
+        </div>
+
+
+        <div class="week3">
+
+        <h2> Week 3 </h2>
+
+
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+
+        </div>
+
+
+        <div class="week4">
+
+        <h2> Week 4 </h2>
+
+
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        Spend 1 hour dancing
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+
+        </div>
 
     
 
+</body>
+</html>
 
-
-    <h2> Learn to Cook </h2>
-
-    <table class="blueTable">
-    <thead>
-    <tr>
-    <th>Week 1</th>
-    <th>Week 2</th>
-    <th>Week 3</th>
-    <th>Week 4</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>Spend 1 hour cooking 1 item 1</td>
-    <td>Spend 1 hour cooking 2 item 1</td>
-    <td>Spend 1 hour cooking 3 item 1</td>
-    <td>Spend 1 hour cooking 4 item 1</td>
-    </tr>
-    <tr>
-    <td>Spend 1 hour cooking 1 item 2</td>
-    <td>Spend 1 hour cooking 2 item 2</td>
-    <td>Spend 1 hour cooking 3 item 2</td>
-    <td>Spend 1 hour cooking 4 item 2</td>
-    </tr>
-    <tr>
-    <td>Spend 1 hour cooking 1 item 3</td>
-    <td>Spend 1 hour cooking 2 item 3</td>
-    <td>Spend 1 hour cooking 3 item 3</td>
-    <td>Spend 1 hour cooking 4 item 3</td>
-    </tr>
-    <tr>
-    <td>Spend 1 hour cooking 1 item 4</td>
-    <td>Spend 1 hour cooking 2 item 4</td>
-    <td>Spend 1 hour cooking 3 item 4</td>
-    <td>Spend 1 hour cooking 4 item 4</td>
-    </tr>
-    </tbody>
-    </table>
-
-    <br>
-
-
-
-    
-
-
-
-    <h2> Learn to Dance </h2>
-
-    <table class="blueTable">
-    <thead>
-    <tr>
-    <th>Week 1</th>
-    <th>Week 2</th>
-    <th>Week 3</th>
-    <th>Week 4</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-    <td>Spend 2 Hours dancing 1 item 1</td>
-    <td>Spend 2 Hours dancing 2 item 1</td>
-    <td>Spend 2 Hours dancing 3 item 1</td>
-    <td>Spend 2 Hours dancing 4 item 1</td>
-    </tr>
-    <tr>
-    <td>Spend 2 Hours dancing 1 item 2</td>
-    <td>Spend 2 Hours dancing 2 item 2</td>
-    <td>Spend 2 Hours dancing 3 item 2</td>
-    <td>Spend 2 Hours dancing 4 item 2</td>
-    </tr>
-    <tr>
-    <td>Spend 2 Hours dancing 1 item 3</td>
-    <td>Spend 2 Hours dancing 2 item 3</td>
-    <td>Spend 2 Hours dancing 3 item 3</td>
-    <td>Spend 2 Hours dancing 4 item 3</td>
-    </tr>
-    <tr>
-    <td>Spend 2 Hours dancing 1 item 4</td>
-    <td>Spend 2 Hours dancing 2 item 4</td>
-    <td>Spend 2 Hours dancing 3 item 4</td>
-    <td>Spend 2 Hours dancing 4 item 4</td>
-    </tr>
-    </tbody>
-    </table>
-
-    <br>
-
-
-
-    
