@@ -24,7 +24,7 @@ def intro():
     time.sleep(2)
     print("Current Unallocated time: ", w_time)
     time.sleep(2)
-    sleep_time = int(input("Enter how many hours of sleep on average you get a night \n")) * 7
+    sleep_time = int(input("Enter how many hours of sleep on average do you get a night \n")) * 7
     w_time -= sleep_time
     time.sleep(2)
     print("Current Unallocated time: ", w_time)
