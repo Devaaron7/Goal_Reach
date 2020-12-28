@@ -1,4 +1,35 @@
+import os
 
+'''
+Logic to display correct Hours / Minutes for Divided Goal Time
+
+# Divide into 4 with hours and minutes
+
+## 10 - 2 Hours & 30 Minutes outputted
+
+i = 7.5 # Hours
+
+m = i * 60  # minutes
+
+d = m / 4
+
+re_hr = d // 60
+
+re_min = d % 60
+
+if re_min == 0:
+    print("If divided by 4, it was take you {} hour(s) to complete".format(int(re_hr)))
+elif re_hr == 0:
+    print("If divided by 4, it was take you {} minutes to complete".format(int(re_min)))
+else:
+    print("If divided by 4, it was take you {} hours & {} minutes to complete".format(int(re_hr), int(re_min)))
+
+'''
+
+
+t = {"Test 1": 10, "Test 2": 16, "Test 3": 25}
+
+paste_start = """
 
 <!DOCTYPE html>
 <html>
@@ -112,242 +143,161 @@ border: 0px solid red;
 
 </style>
 
+"""
 
-
-        <div class="weektitle">
-
-        <h1> Learn to Ride Bike </h1>
-
-        </div>
-
-
-        <div class="week1">
-
-        <h2> Week 1 </h2>
-
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
-        </div>
-
-
-        <div class="week2">
-
-        <h2> Week 2 </h2>
-
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
-
-        </div>
-
-
-        <div class="week3">
-
-        <h2> Week 3 </h2>
-
-
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
-
-        </div>
-
-
-        <div class="week4">
-
-        <h2> Week 4 </h2>
-
-
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Practice Riding for [] Hours & [] Minutes
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
-
-        </div>
-
-    
-
-        <div class="weektitle">
-
-        <h1> Learn to Cook </h1>
-
-        </div>
-
-
-        <div class="week1">
-
-        <h2> Week 1 </h2>
-
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
-        </div>
-
-
-        <div class="week2">
-
-        <h2> Week 2 </h2>
-
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
-
-        </div>
-
-
-        <div class="week3">
-
-        <h2> Week 3 </h2>
-
-
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
-
-        </div>
-
-
-        <div class="week4">
-
-        <h2> Week 4 </h2>
-
-
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        Focus on goal for [] hours
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
-
-        </div>
-
-    
+paste_end = """
 
 </body>
 </html>
+
+"""
+
+Total_Paste = ""
+
+Total_Paste += paste_start
+
+running = 0
+
+running += len(t)
+
+while running != 0:
+
+    goal = input("Enter A Goal\n")
+
+    s_goal = input("Enter A Sub Goal\n")
+
+    paste2 = """
+
+        <div class="weektitle">
+
+        <h1> {g} </h1>
+
+        </div>
+
+
+        <div class="week1">
+
+        <h2> Week 1 </h2>
+
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+        </div>
+
+
+        <div class="week2">
+
+        <h2> Week 2 </h2>
+
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+
+        </div>
+
+
+        <div class="week3">
+
+        <h2> Week 3 </h2>
+
+
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+
+        </div>
+
+
+        <div class="week4">
+
+        <h2> Week 4 </h2>
+
+
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" />
+        <div class="control_indicator"></div>
+        </label>
+        <label class="control control-checkbox">
+        {sg}
+        <input type="checkbox" disabled="disabled" />
+        <div class="control_indicator"></div>
+
+        </div>
+
+    """.format(sg = s_goal, g = goal)
+
+    Total_Paste += paste2
+
+    choice = input("Do you want to enter another goal? Please enter y or n\n")
+    if choice == "y":
+        pass
+    if choice == "n":
+        running = False
+
+
+Total_Paste += paste_end
+
+f = open("test.html", "w")
+f.write(Total_Paste)
+f.close()
+
 
