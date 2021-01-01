@@ -27,7 +27,9 @@ else:
 '''
 
 
-t = {"Test 1": 10, "Test 2": 16, "Test 3": 25}
+t = {"Buy a Car": 6, "Go to Church": 10, "Go to Gym": 40}
+
+
 
 paste_start = """
 
@@ -156,148 +158,155 @@ Total_Paste = ""
 
 Total_Paste += paste_start
 
-running = 0
 
-running += len(t)
+for x in t.keys():
 
-while running != 0:
+    goal = x
 
-    goal = input("Enter A Goal\n")
+    i = t.get(x)
 
-    s_goal = input("Enter A Sub Goal\n")
+    m = i * 60  # minutes
+
+    d = m / 4
+
+    re_hr = d // 60
+
+    re_min = d % 60
+
+    if re_min == 0:
+        i = "Focus for {} hour(s)".format(int(re_hr))
+    elif re_hr == 0:
+        i = "Focus for {} minutes".format(int(re_min))
+    else:
+        i = "Focus for {} hours & {} minutes".format(int(re_hr), int(re_min))
 
     paste2 = """
 
-        <div class="weektitle">
+    <div class="weektitle">
 
-        <h1> {g} </h1>
+    <h1> {g} </h1>
 
-        </div>
-
-
-        <div class="week1">
-
-        <h2> Week 1 </h2>
-
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
-        </div>
+    </div>
 
 
-        <div class="week2">
+    <div class="week1">
 
-        <h2> Week 2 </h2>
+    <h2> Week 1 </h2>
 
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
-
-        </div>
-
-
-        <div class="week3">
-
-        <h2> Week 3 </h2>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+    </div>
 
 
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
+    <div class="week2">
 
-        </div>
+    <h2> Week 2 </h2>
+
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
 
 
-        <div class="week4">
+    <div class="week3">
 
-        <h2> Week 4 </h2>
+    <h2> Week 3 </h2>
 
 
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" />
-        <div class="control_indicator"></div>
-        </label>
-        <label class="control control-checkbox">
-        {sg}
-        <input type="checkbox" disabled="disabled" />
-        <div class="control_indicator"></div>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
 
-        </div>
+    </div>
 
-    """.format(sg = s_goal, g = goal)
+
+    <div class="week4">
+
+    <h2> Week 4 </h2>
+
+
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    {sg}
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+    """.format(sg = i, g = goal)
 
     Total_Paste += paste2
 
-    choice = input("Do you want to enter another goal? Please enter y or n\n")
-    if choice == "y":
-        pass
-    if choice == "n":
-        running = False
-
-
-Total_Paste += paste_end
+    Total_Paste += paste_end
 
 f = open("test.html", "w")
 f.write(Total_Paste)
 f.close()
+
+os.system("start " + "test.html")
 
 
