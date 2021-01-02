@@ -1,5 +1,5 @@
 import os
-
+from Mid import goals
 '''
 Logic to display correct Hours / Minutes for Divided Goal Time
 
@@ -27,7 +27,7 @@ else:
 '''
 
 
-t = {"Buy a Car": 6, "Go to Church": 10, "Go to Gym": 40}
+t = goals
 
 
 
@@ -167,7 +167,9 @@ for x in t.keys():
 
     m = i * 60  # minutes
 
-    d = m / 4
+    dd = m / 4
+
+    d = dd / 4
 
     re_hr = d // 60
 

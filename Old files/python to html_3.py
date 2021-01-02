@@ -1,4 +1,37 @@
+import os
 
+'''
+Logic to display correct Hours / Minutes for Divided Goal Time
+
+# Divide into 4 with hours and minutes
+
+## 10 - 2 Hours & 30 Minutes outputted
+
+i = 7.5 # Hours
+
+m = i * 60  # minutes
+
+d = m / 4
+
+re_hr = d // 60
+
+re_min = d % 60
+
+if re_min == 0:
+    print("If divided by 4, it was take you {} hour(s) to complete".format(int(re_hr)))
+elif re_hr == 0:
+    print("If divided by 4, it was take you {} minutes to complete".format(int(re_min)))
+else:
+    print("If divided by 4, it was take you {} hours & {} minutes to complete".format(int(re_hr), int(re_min)))
+
+'''
+
+
+t = goals
+
+
+
+paste_start = """
 
 <!DOCTYPE html>
 <html>
@@ -112,11 +145,46 @@ border: 0px solid red;
 
 </style>
 
+"""
 
+paste_end = """
+
+</body>
+</html>
+
+"""
+
+Total_Paste = ""
+
+Total_Paste += paste_start
+
+
+for x in t.keys():
+
+    goal = x
+
+    i = t.get(x)
+
+    m = i * 60  # minutes
+
+    d = m / 4
+
+    re_hr = d // 60
+
+    re_min = d % 60
+
+    if re_min == 0:
+        i = "Focus for {} hour(s)".format(int(re_hr))
+    elif re_hr == 0:
+        i = "Focus for {} minutes".format(int(re_min))
+    else:
+        i = "Focus for {} hours & {} minutes".format(int(re_hr), int(re_min))
+
+    paste2 = """
 
     <div class="weektitle">
 
-    <h1> new test </h1>
+    <h1> {g} </h1>
 
     </div>
 
@@ -126,22 +194,22 @@ border: 0px solid red;
     <h2> Week 1 </h2>
 
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
     </div>
@@ -152,22 +220,22 @@ border: 0px solid red;
     <h2> Week 2 </h2>
 
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
 
@@ -180,22 +248,22 @@ border: 0px solid red;
 
 
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
 
@@ -208,29 +276,37 @@ border: 0px solid red;
 
 
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    {sg}
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
 
     </div>
 
-    
+    """.format(sg = i, g = goal)
 
-</body>
-</html>
+    Total_Paste += paste2
+
+    Total_Paste += paste_end
+
+f = open("test.html", "w")
+f.write(Total_Paste)
+f.close()
+
+os.system("start " + "test.html")
+
 
