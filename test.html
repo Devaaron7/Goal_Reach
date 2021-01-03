@@ -1,122 +1,122 @@
 
 
-<!DOCTYPE html>
-<html>
-<body>
+    <!DOCTYPE html>
+    <html>
+    <body>
 
-<style>
+    <style>
 
-.control {
-font-family: arial;
-display: block;
-position: relative;
-padding-left: 36px;
-margin-bottom: 15px;
-padding-top: 3px;
-cursor: pointer;
-font-size: 17px;
-}
-.control input {
-position: absolute;
-z-index: -1;
-opacity: 0;
-}
-.control_indicator {
-position: absolute;
-top: 2px;
-left: 0;
-height: 20px;
-width: 20px;
-background: #e6e6e6;
-border: 1px solid #000000;
-border-radius: 0px;
-}
-.control:hover input ~ .control_indicator,
-.control input:focus ~ .control_indicator {
-background: #cccccc;
-}
+    .control {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 36px;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    cursor: pointer;
+    font-size: 17px;
+    }
+    .control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    }
+    .control_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background: #e6e6e6;
+    border: 1px solid #000000;
+    border-radius: 0px;
+    }
+    .control:hover input ~ .control_indicator,
+    .control input:focus ~ .control_indicator {
+    background: #cccccc;
+    }
 
-.control input:checked ~ .control_indicator {
-background: #2aa1c0;
-}
-.control:hover input:not([disabled]):checked ~ .control_indicator,
-.control input:checked:focus ~ .control_indicator {
-background: #0e6647d;
-}
-.control input:disabled ~ .control_indicator {
-background: #e6e6e6;
-opacity: 0.6;
-pointer-events: none;
-}
-.control_indicator:after {
-box-sizing: unset;
-content: '';
-position: absolute;
-display: none;
-}
-.control input:checked ~ .control_indicator:after {
-display: block;
-}
-.control-checkbox .control_indicator:after {
-left: 8px;
-top: 4px;
-width: 3px;
-height: 8px;
-border: solid #ffffff;
-border-width: 0 2px 2px 0;
-transform: rotate(45deg);
-}
-.control-checkbox input:disabled ~ .control_indicator:after {
-border-color: #7b7b7b;
-}
+    .control input:checked ~ .control_indicator {
+    background: #2aa1c0;
+    }
+    .control:hover input:not([disabled]):checked ~ .control_indicator,
+    .control input:checked:focus ~ .control_indicator {
+    background: #0e6647d;
+    }
+    .control input:disabled ~ .control_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+    }
+    .control_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+    }
+    .control input:checked ~ .control_indicator:after {
+    display: block;
+    }
+    .control-checkbox .control_indicator:after {
+    left: 8px;
+    top: 4px;
+    width: 3px;
+    height: 8px;
+    border: solid #ffffff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    }
+    .control-checkbox input:disabled ~ .control_indicator:after {
+    border-color: #7b7b7b;
+    }
 
-{display: inline-block; *display: inline; zoom: 1; vertical-align: top; font-size: 12px;}
-
-
-.weektitle {
-width: 100%;
-float: left;
-padding: 5px;
-border: 0px solid red;
-}
+    {display: inline-block; *display: inline; zoom: 1; vertical-align: top; font-size: 12px;}
 
 
-.week1 {
-width: 20%;
-float: left;
-padding: 5px;
-border: 0px solid red;
-}
-
-.week2 {
-width: 20%;
-float: left;
-padding: 5px;
-border: 0px solid red;
-}
-
-.week3 {
-width: 20%;
-float: left;
-padding: 5px;
-border: 0px solid red;
-}
+    .weektitle {
+    width: 100%;
+    float: left;
+    padding: 5px;
+    border: 0px solid red;
+    }
 
 
-.week4 {
-width: 20%;
-float: left;
-padding: 5px;
-border: 0px solid red;
-}
+    .week1 {
+    width: 20%;
+    float: left;
+    padding: 5px;
+    border: 0px solid red;
+    }
 
-</style>
+    .week2 {
+    width: 20%;
+    float: left;
+    padding: 5px;
+    border: 0px solid red;
+    }
+
+    .week3 {
+    width: 20%;
+    float: left;
+    padding: 5px;
+    border: 0px solid red;
+    }
 
 
+    .week4 {
+    width: 20%;
+    float: left;
+    padding: 5px;
+    border: 0px solid red;
+    }
+
+    </style>
+
+    
 
     <div class="weektitle">
 
-    <h1> new test </h1>
+    <h1> Pushups </h1>
 
     </div>
 
@@ -126,22 +126,22 @@ border: 0px solid red;
     <h2> Week 1 </h2>
 
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
     </div>
@@ -152,22 +152,22 @@ border: 0px solid red;
     <h2> Week 2 </h2>
 
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
 
@@ -180,22 +180,22 @@ border: 0px solid red;
 
 
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
 
@@ -208,29 +208,747 @@ border: 0px solid red;
 
 
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 37 minutes
+    Focus for 15 minutes
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
 
     </div>
 
     
-
 </body>
 </html>
 
+
+    <div class="weektitle">
+
+    <h1> Dumbells </h1>
+
+    </div>
+
+
+    <div class="week1">
+
+    <h2> Week 1 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+    </div>
+
+
+    <div class="week2">
+
+    <h2> Week 2 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week3">
+
+    <h2> Week 3 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week4">
+
+    <h2> Week 4 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+    
+</body>
+</html>
+
+
+    <div class="weektitle">
+
+    <h1> Code Academy </h1>
+
+    </div>
+
+
+    <div class="week1">
+
+    <h2> Week 1 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+    </div>
+
+
+    <div class="week2">
+
+    <h2> Week 2 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week3">
+
+    <h2> Week 3 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week4">
+
+    <h2> Week 4 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 45 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+    
+</body>
+</html>
+
+
+    <div class="weektitle">
+
+    <h1> Program Practice </h1>
+
+    </div>
+
+
+    <div class="week1">
+
+    <h2> Week 1 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+    </div>
+
+
+    <div class="week2">
+
+    <h2> Week 2 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week3">
+
+    <h2> Week 3 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week4">
+
+    <h2> Week 4 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+    
+</body>
+</html>
+
+
+    <div class="weektitle">
+
+    <h1> Research Entry Tech Jobs </h1>
+
+    </div>
+
+
+    <div class="week1">
+
+    <h2> Week 1 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+    </div>
+
+
+    <div class="week2">
+
+    <h2> Week 2 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week3">
+
+    <h2> Week 3 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week4">
+
+    <h2> Week 4 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 15 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+    
+</body>
+</html>
+
+
+    <div class="weektitle">
+
+    <h1> Sell item on Ebay </h1>
+
+    </div>
+
+
+    <div class="week1">
+
+    <h2> Week 1 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+    </div>
+
+
+    <div class="week2">
+
+    <h2> Week 2 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week3">
+
+    <h2> Week 3 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week4">
+
+    <h2> Week 4 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 30 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+    
+</body>
+</html>
+
+
+    <div class="weektitle">
+
+    <h1> Make progress on Book </h1>
+
+    </div>
+
+
+    <div class="week1">
+
+    <h2> Week 1 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+    </div>
+
+
+    <div class="week2">
+
+    <h2> Week 2 </h2>
+
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week3">
+
+    <h2> Week 3 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+
+    <div class="week4">
+
+    <h2> Week 4 </h2>
+
+
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" />
+    <div class="control_indicator"></div>
+    </label>
+    <label class="control control-checkbox">
+    Focus for 22 minutes
+    <input type="checkbox" disabled="disabled" />
+    <div class="control_indicator"></div>
+
+    </div>
+
+    
+</body>
+</html>
