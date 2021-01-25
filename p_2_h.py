@@ -2,6 +2,7 @@ import os
 from End_2 import goals
 
 t = goals
+c = gmonth
 '''
 def freq_text():
     body = """
@@ -136,6 +137,8 @@ def html_body2():
     body = """
 
     <div class="weektitle">
+
+    <h1> {m} </h1>
 
     <h1> {g} </h1>
 
@@ -283,7 +286,7 @@ for x in t.keys():
     else:
         i = "Focus for {} hours & {} minutes".format(int(re_hr), int(re_min))
 
-    paste2 = html_body2().format(sg = i, g = goal)
+    paste2 = html_body2().format(sg = i, g = goal, m = c)
 
     Total_Paste += paste2
     Total_Paste += paste_end
