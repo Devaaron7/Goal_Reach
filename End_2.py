@@ -73,7 +73,6 @@ def add_goal():
         time.sleep(2)
         print("Goal added to log")
         time_balance -= duration
-        
         print("Remaining amount of time for month: ", time_balance)
         time.sleep(2)
         clear()
@@ -95,20 +94,14 @@ def ending():
     clear()
     print("Ok, lets think ahead...")
     time.sleep(2)
-    print("It's the end of the month, and you start reviewing the goals you completed")
+    print("It's the end of the month, and here is all the goals you have completed:")
     time.sleep(2)
-    index_range = len(key)
-    r_index = random.randint(0, index_range)
-    print("You ", key[r_index])
-    key.pop(0)
+    for x in goals:
+        print(x)
     time.sleep(2)
-    print("you also ", key[r_index])
-    key.pop(0)
-    time.sleep(2)
-    print("And You", key[r_index])
-    time.sleep(2)
-    print("Nice work!!")
-
+    print("Exporting a checklist for you to print out - Lets start tracking your goals!")
+    time.sleep(1)
+    
 time_balance = intro() 
 
 clear()
@@ -117,7 +110,5 @@ print("Ok - lets start assigning some goals to complete")
 
 add_goal()
 
-#ending()
-
-#input("Program Ended")
+ending()
 

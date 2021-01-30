@@ -1,5 +1,5 @@
 import os
-from End_2 import goals
+from End_2 import goals, gmonth
 
 t = goals
 c = gmonth
