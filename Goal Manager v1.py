@@ -283,6 +283,6 @@ f = open("test.html", "w")
 f.write(Total_Paste)
 f.close()
 
-os.system("start " + "test.html")
+os.system("start " + "checklist.html")
 
 
