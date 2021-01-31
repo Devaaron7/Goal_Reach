@@ -279,7 +279,7 @@ for x in t.keys():
     Total_Paste += paste2
     Total_Paste += paste_end
 
-f = open("test.html", "w")
+f = open("checklist.html", "w")
 f.write(Total_Paste)
 f.close()
 
