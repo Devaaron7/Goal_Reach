@@ -3,18 +3,6 @@ from End_2 import goals, gmonth
 
 t = goals
 c = gmonth
-'''
-def freq_text():
-    body = """
-    <label class="control control-checkbox">
-    {sg}
-    <input type="checkbox" />
-    <div class="control_indicator"></div>
-    </label>
-    <label class="control control-checkbox">
-    """
-    return body
-'''
 
 def html_body1():
     body = """
@@ -138,8 +126,6 @@ def html_body2():
 
     <div class="weektitle">
 
-    <h1> {m} </h1>
-
     <h1> {g} </h1>
 
     </div>
@@ -257,11 +243,13 @@ def html_body2():
     return body
 
 paste_start = html_body1()
+month = "<h1>{}</h1>".format(gmonth)
 paste_end = """
 </body>
 </html>
 """
 Total_Paste = ""
+Total_Paste += month
 Total_Paste += paste_start
 
 for x in t.keys():
@@ -286,7 +274,7 @@ for x in t.keys():
     else:
         i = "Focus for {} hours & {} minutes".format(int(re_hr), int(re_min))
 
-    paste2 = html_body2().format(sg = i, g = goal, m = c)
+    paste2 = html_body2().format(sg = i, g = goal)
 
     Total_Paste += paste2
     Total_Paste += paste_end

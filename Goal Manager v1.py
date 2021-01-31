@@ -1,4 +1,11 @@
-<h1>March</h1>
+import os
+from Wizard import goals, gmonth
+
+t = goals
+c = gmonth
+
+def html_body1():
+    body = """
 
     <!DOCTYPE html>
     <html>
@@ -112,11 +119,14 @@
 
     </style>
 
-    
+    """
+    return body
+def html_body2():
+    body = """
 
     <div class="weektitle">
 
-    <h1> Test1 </h1>
+    <h1> {g} </h1>
 
     </div>
 
@@ -126,22 +136,22 @@
     <h2> Week 1 </h2>
 
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
     </div>
@@ -152,22 +162,22 @@
     <h2> Week 2 </h2>
 
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
 
@@ -180,22 +190,22 @@
 
 
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
 
@@ -208,27 +218,71 @@
 
 
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" />
     <div class="control_indicator"></div>
     </label>
     <label class="control control-checkbox">
-    Focus for 18 minutes
+    {sg}
     <input type="checkbox" disabled="disabled" />
     <div class="control_indicator"></div>
 
     </div>
 
-    
+    """
+    return body
+
+paste_start = html_body1()
+month = "<h1>{}</h1>".format(gmonth)
+paste_end = """
 </body>
 </html>
+"""
+Total_Paste = ""
+Total_Paste += month
+Total_Paste += paste_start
+
+for x in t.keys():
+    goal = x
+
+    i = t.get(x)
+
+    m = i * 60 
+
+    dd = m / 4
+
+    d = dd / 4
+
+    re_hr = d // 60
+
+    re_min = d % 60
+
+    if re_min == 0:
+        i = "Focus for {} hour(s)".format(int(re_hr))
+    elif re_hr == 0:
+        i = "Focus for {} minutes".format(int(re_min))
+    else:
+        i = "Focus for {} hours & {} minutes".format(int(re_hr), int(re_min))
+
+    paste2 = html_body2().format(sg = i, g = goal)
+
+    Total_Paste += paste2
+    Total_Paste += paste_end
+
+f = open("test.html", "w")
+f.write(Total_Paste)
+f.close()
+
+os.system("start " + "test.html")
+
+
