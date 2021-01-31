@@ -78,6 +78,7 @@ def add_goal():
         clear()
         if time_balance <= 2:
             print("We're running out of available time for more goals --- current balance is: ", time_balance)
+            time.sleep(2)
             #running = False
             break
         print("Do you want to add another goal for the month? Type 'y' for yes or 'n' for no \n")
@@ -107,6 +108,8 @@ time_balance = intro()
 clear()
 
 print("Ok - lets start assigning some goals to complete") 
+
+time.sleep(1)
 
 add_goal()
 
